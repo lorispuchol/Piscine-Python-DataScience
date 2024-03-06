@@ -18,7 +18,7 @@ punctuation characters, digits and spaces in a string
         marks = "\'!\"#$%&()*+,-./:;<=>?@[]^_`{|}~"
         sum_uppers = sum(1 for c in txt if c.isupper())
         sum_lowers = sum(1 for c in txt if c.islower())
-        sum_marks = sum(1 for c in txt if c in marks)
+        sum_marks = sum(1 for c in txt if c in marks) # OU import string and check in string.punctuation 
         sum_spaces = sum(1 for c in txt if c == ' ')
         sum_digits = sum(1 for c in txt if c.isdigit())
         total = len(txt)
