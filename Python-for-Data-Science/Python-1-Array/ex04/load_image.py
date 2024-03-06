@@ -12,7 +12,7 @@ def ft_load(path: str) -> np.array:  # you can return to the desired format
         # # Read RGB image
         img = cv2.imread(path)
 
-        print("The shape of image is:", img.shape)
+        # print("The shape of image is:", img.shape)
         # # Output img with window name as 'image'
         # cv2.imshow('image', img)
         # # Maintain output window until user presses a key

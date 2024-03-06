@@ -17,6 +17,7 @@ def slice_me(family: list, start: int, end: int) -> list:
     print("My new shape is :", truncated.shape)
     return truncated
 
+
 def main():
     '''Main de test'''
     family = [
@@ -27,6 +28,7 @@ def main():
     ]
     print(slice_me(family, 0, 2))
     print(slice_me(family, 1, -2))
+
 
 if __name__ == "__main__":
     main()
