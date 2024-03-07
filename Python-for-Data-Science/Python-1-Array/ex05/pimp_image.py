@@ -52,15 +52,21 @@ def ft_grey(array) -> np.array:
 
 def main():
     '''test'''
-    array = ft_load("landscape.jpg")
-    cv2.imshow('image', ft_invert(array))
-    cv2.imshow('image2', ft_red(array))
-    cv2.imshow('image3', ft_green(array))
-    cv2.imshow('image4', ft_blue(array))
-    cv2.imshow('image5', ft_grey(array))
-    cv2.waitKey(40000)
-    cv2.destroyAllWindows()
-    print(ft_invert.__doc__)
+    try:
+        array = ft_load("landscape.jpg")
+        if array == []:
+            return
+        cv2.imshow('image', ft_invert(array))
+        cv2.imshow('image2', ft_red(array))
+        cv2.imshow('image3', ft_green(array))
+        cv2.imshow('image4', ft_blue(array))
+        cv2.imshow('image5', ft_grey(array))
+        cv2.waitKey(40000)
+        cv2.destroyAllWindows()
+        print(ft_invert.__doc__)
+    except BaseException as e:
+        print("MyError:", e)
+        return
 
 
 if __name__ == "__main__":

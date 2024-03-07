@@ -4,16 +4,20 @@ import cv2
 
 def ft_zoom(path: str):
 
-    img = ft_load(path)
-    print(img)
+    try:
+        img = ft_load(path)
+        print(img)
 
-    img = img[100:500, 400:800, :1]
+        img = img[100:500, 400:800, :1]
 
-    print("New shape after slicing:", img.shape)
-    cv2.imshow('image', img)
-    cv2.waitKey(4000)
-    cv2.destroyAllWindows()
-    return img
+        print("New shape after slicing:", img.shape)
+        cv2.imshow('image', img)
+        cv2.waitKey(4000)
+        cv2.destroyAllWindows()
+        return img
+    except BaseException as e:
+        print("MyError:", e)
+        return []
 
 
 def main():

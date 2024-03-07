@@ -12,3 +12,4 @@ def ft_load(path: str) -> np.array:  # you can return to the desired format
         return img
     except BaseException as e:
         print("MyError:", e)
+        return []
