@@ -8,6 +8,7 @@ def decode_value(s: str):
         return float(s.replace("M", "")) * 1000000
     if "k" in s:
         return float(s.replace("k", "")) * 1000
+    return float(s)
 
 
 def main():

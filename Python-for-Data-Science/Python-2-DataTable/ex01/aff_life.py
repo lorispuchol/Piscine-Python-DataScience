@@ -16,6 +16,11 @@ def main():
         y = france.iloc[0, 1:].values
 
         plt.plot(x, y)
+
+        plt.title("France Life Expectancy Projections")
+        plt.xlabel("Year")
+        plt.ylabel("Life Expectancy")
+
         plt.show()
 
     except BaseException as e:
