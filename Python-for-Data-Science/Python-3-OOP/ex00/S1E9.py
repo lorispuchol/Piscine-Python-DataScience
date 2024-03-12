@@ -6,6 +6,7 @@ class Character(ABC):
     '''docstring for Character abstract Class'''
     @abstractmethod
     def abstarctor():
+        '''to make the class abstract'''
         pass
 
     # @abstractmethod
@@ -26,6 +27,7 @@ class Stark(Character):
 
     '''docstring Stark for Class'''
     def abstarctor():
+        '''to make the class abstract'''
         pass
 
 # class Character(ABC):

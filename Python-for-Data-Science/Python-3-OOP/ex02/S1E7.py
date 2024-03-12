@@ -55,6 +55,7 @@ class Lannister(Character):
 
 
 def main():
+    """testing"""
     Robert = Baratheon("Robert")
     print(Robert.__dict__)
     print(Robert.__str__)
