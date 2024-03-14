@@ -1,8 +1,10 @@
 def mean(numbers) -> float:
+    """return mean of numbers"""
     return sum(numbers) / len(numbers)
 
 
 def median(numbers: tuple) -> float:
+    """return median of numbers"""
     sorted_nums = sorted(numbers)
     n = len(numbers)
 
@@ -17,6 +19,7 @@ def median(numbers: tuple) -> float:
 
 
 def quartile(numbers) -> float:
+    """return list with both quartile q1 and q3"""
     sorted_nums = sorted(numbers)
     n = len(numbers)
 
@@ -30,21 +33,24 @@ def quartile(numbers) -> float:
 
 
 def std_deviation(numbers) -> float:
+    """return standard deviation of numbers"""
     return pow(variance(numbers), 0.5)
 
 
 def variance(numbers) -> float:
+    """return variance of numbers"""
     average = mean(numbers)
 
     return sum([pow(abs(n - average), 2) for n in numbers]) / len(numbers)
 
 
 def selection(numbers, operation) -> str:
+    """select the operation to make"""
     if len(numbers) <= 0:
         return "ERROR"
-    # for n in numbers:
-    #     if not isinstance(n, int | float):
-    #         return "ERROR"
+    for n in numbers:
+        if not isinstance(n, int | float):
+            return "ERROR"
     res = 0
     if operation == "mean":
         res = mean(numbers)
@@ -62,7 +68,7 @@ def selection(numbers, operation) -> str:
 
 
 def ft_statistics(*args, **kwargs) -> None:
-
+    "print given statistics of list of numbers "
     operations = ("mean", "median", "quartile", "std", "var")
 
     for key in kwargs:
@@ -71,11 +77,14 @@ def ft_statistics(*args, **kwargs) -> None:
 
 
 def main():
-    ft_statistics(1, 42, 360, 11, 64, toto="mean", tutu="median", tata="quartile")
+    "testing"
+    ft_statistics(1, 42, 360, 11, 64, toto="mean", tutu="median",
+                  tata="quartile")
     print("-----")
     ft_statistics(5, 75, 450, 18, 597, 27474, 48575, hello="std", world="var")
     print("-----")
-    ft_statistics(5, 75, 450, 18, 597, 27474, 48575, ejfhhe="heheh", ejdjdejn="kdekem")
+    ft_statistics(
+        5, 75, 450, 18, 597, 27474, 48575, ejfhhe="heheh", ejdjdejn="kdekem")
     print("-----")
     ft_statistics(toto="mean", tutu="median", tata="quartile")
 
