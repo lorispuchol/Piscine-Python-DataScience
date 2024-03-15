@@ -1,0 +1,12 @@
+version: "3"
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    ports:
+      - 5432:5432
+    container_name: postgres
+    environment:                         # pass environnement variables to container
+      POSTGRES_USER: "lpuchol"
+      POSTGRES_PASSWORD: "mysecretpassword"
+      POSTGRES_DB: "piscineds"

@@ -1,0 +1,24 @@
+version: "3"
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    ports:
+      - 5432:5432
+    container_name: postgres
+    environment:                         # pass environnement variables to container
+      POSTGRES_USER: "lpuchol"
+      POSTGRES_PASSWORD: "mysecretpassword"
+      POSTGRES_DB: "piscineds"
+
+  administrator:
+    image: dpage/pgadmin4:latest
+    container_name: pg_admin
+    restart: always
+    ports:
+      - 5050:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "lpuchol@lpuchol.fr"
+      PGADMIN_DEFAULT_PASSWORD: "password"
+    depends_on:
+      - db
